@@ -1,0 +1,370 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  z-index: 100;
+}
+.header-logo {
+  margin: 0.3rem;
+  color: white;
+  font-size: 1.3rem;
+}
+.logo-span {
+  color: cyan;
+  font-size: 1.2rem;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
+  margin-top: 0;
+  position: absolute;
+  top: 99%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+  transition: clip-path 0.3s ease;
+}
+
+.menu-is-active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.menu__link {
+  display: block;
+  padding: 1.5rem;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.menu__link:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+  border-radius: 1rem;
+  font-weight: bold;
+}
+.icon {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.home {
+  background-image: url(../images/programing-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin-top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-text__name {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+@keyframes tiping {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.home-text__animation {
+  display: inline-block;
+  font-size: 1.8rem;
+  width: 17ch;
+  border-right: 0.2rem solid rgb(0, 0, 0);
+  white-space: nowrap;
+  animation: tiping 3s steps(19), blink 0.5s step-start infinite alternate;
+  overflow: hidden;
+}
+/* main {
+  padding: 1.5rem;
+} */
+section {
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  scroll-margin-top: 2rem;
+}
+.info-title,
+.skills-title,
+.work-title,
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.about-me {
+  font-size: 1.3rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.figure img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+.figure figcaption {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.card {
+  width: 300px;
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+  box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+.card-img {
+  width: 100%;
+  height: 100%;
+}
+.card-image img {
+  width: 50%;
+  height: 50%;
+}
+
+.card-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.card:hover .card-text {
+  transform: translateY(0);
+  transition: transform 0.3s;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.card-title {
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+}
+.enlaces {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 0.4rem;
+}
+.card-text a {
+  text-align: center;
+  display: inline-block;
+  font-size: bold;
+  color: black;
+  font-size: 1rem;
+  padding: 0.3rem 0.7rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+}
+.contact {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.form {
+  background-color: rgb(36, 48, 60);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.input-name,
+.input-email {
+  margin: 1rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+.input-submit {
+  display: block;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  /* border: 3px solid rgb(31, 82, 198); */
+  border-radius: 0.7rem;
+  font-size: 1rem;
+}
+
+.form-dates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+textarea {
+  resize: none;
+  width: 100%;
+  height: 150px;
+  border: none;
+  margin-top: 1.4rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+footer {
+  text-align: center;
+  background-color: black;
+  margin: 0;
+  color: white;
+}
+
+footer h4 {
+  margin: 0;
+  padding: 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .container {
+    width: 100%;
+  }
+  main {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .icon-menu {
+    display: none;
+  }
+  .menu {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0;
+    margin-top: 0;
+    position: initial;
+    margin-top: 0.5rem;
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .menu__link {
+    color: white;
+    padding: 1rem;
+  }
+  .form {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 991px) {
+  .header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .about-me {
+    font-size: 1.6rem;
+  }
+}
+
+.form [required]:valid {
+  border: thin solid green;
+}
+
+.form [required]:invalid {
+  border: thin solid red;
+}
+.form-error {
+  padding: 0.4rem;
+  margin-top: -1rem;
+  background-color: red;
+  font-size: 80%;
+  color: whitesmoke;
+  transition: all 0.5 ease-in;
+}
+
+.form-error.is-active {
+  display: block;
+  width: 100%;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
