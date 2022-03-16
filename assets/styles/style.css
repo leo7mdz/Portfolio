@@ -18,13 +18,36 @@ ul {
 }
 body {
   margin: 0;
+  background-color: black;
+  color: white;
+}
+.btn-to-top {
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
+.btn-to-top-active {
+  display: flex;
+}
+.arrow-to-top {
+  font-size: 2rem;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 0.6rem;
   position: sticky;
   top: 0;
   background-color: rgb(0, 0, 0);
@@ -168,6 +191,8 @@ section {
 .card {
   width: 300px;
   height: 190px;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
   overflow: hidden;
   margin-bottom: 1.8rem;
@@ -240,6 +265,8 @@ section {
   display: block;
   width: 100%;
   padding: 0.5rem 1rem;
+  border: transparent;
+  outline: transparent;
 }
 .input-submit {
   display: block;
@@ -252,6 +279,7 @@ section {
   /* border: 3px solid rgb(31, 82, 198); */
   border-radius: 0.7rem;
   font-size: 1rem;
+  border: transparent;
 }
 
 .form-dates {
@@ -264,7 +292,7 @@ textarea {
   resize: none;
   width: 100%;
   height: 150px;
-  border: none;
+  border: transparent;
   margin-top: 1.4rem;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -275,6 +303,7 @@ footer {
   background-color: black;
   margin: 0;
   color: white;
+  margin-top: 2rem;
 }
 
 footer h4 {
@@ -316,7 +345,7 @@ footer h4 {
   }
   .menu__link {
     color: white;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .form {
     width: 60%;

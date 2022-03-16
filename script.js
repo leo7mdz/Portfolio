@@ -1,9 +1,14 @@
 const menu = document.querySelector(".menu"),
-  iconMenu = document.querySelector(".icon");
+  iconMenu = document.querySelector(".icon"),
+  btnToTop = document.querySelector(".btn-to-top");
 
 document.addEventListener("click", (e) => {
   if (e.target === iconMenu) {
     menu.classList.toggle("menu-is-active");
+  }
+
+  if (e.target.matches(".arrow-to-top")) {
+    window.scrollTo(0, 0);
   }
 });
 
@@ -14,6 +19,13 @@ window.addEventListener("resize", () => {
 window.addEventListener("scroll", () => {
   if (window.scrollY) {
     menu.classList.remove("menu-is-active");
+  }
+
+  if (window.scrollY > 300) {
+    console.log(window.scrollY);
+    btnToTop.classList.add("btn-to-top-active");
+  } else {
+    btnToTop.classList.remove("btn-to-top-active");
   }
 });
 
