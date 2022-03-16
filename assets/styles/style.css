@@ -114,7 +114,10 @@ body {
   justify-content: center;
   text-align: center;
 }
-
+.home-text__name,
+.home-text__animation {
+  color: rgb(0, 0, 0);
+}
 .home-text__name {
   margin-top: 0;
   margin-bottom: 0.4rem;
@@ -250,8 +253,8 @@ section {
   margin-bottom: 0;
 }
 .form {
-  background-color: rgb(36, 48, 60);
-  width: 100%;
+  background-color: rgb(29, 31, 34);
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 1rem;
